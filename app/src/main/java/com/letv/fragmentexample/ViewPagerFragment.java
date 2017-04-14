@@ -32,6 +32,7 @@ public class ViewPagerFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         Log.d(TAG, "onCreateView: " + content);
         //在ViewPager中使用Fragment，应该将parentView设为null，否则不知道是Activity还是ViewPager的父视图
+        //http://blog.csdn.net/huanchengdao/article/details/45847303
         mView = inflater.inflate(R.layout.viewpager_fragment1_layout, null, false);
         TextView index = (TextView) mView.findViewById(R.id.viewpager_index_text);
         index.setText(content);

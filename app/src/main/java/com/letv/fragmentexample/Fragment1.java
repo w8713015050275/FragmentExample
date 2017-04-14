@@ -45,6 +45,7 @@ public class Fragment1 extends Fragment {
         mTabLayout = (TabLayout) view.findViewById(R.id.tab_layout);
         mViewPager = (ViewPager) view.findViewById(R.id.view_pager);
         //fragment中嵌套使用Fragment时，构造adapter时使用getChildFragmentManager()，避免视图错误
+        //http://www.cnblogs.com/zhengxt/p/3781139.html
         //在ViewPager滑动切换Fragment时，会预加载当前fragment的左右fragment；
         //滑动时，会将超出的fragment执行到onDestroyView()和对下一个相邻的fragment预加载（加载到onResume周期）；
         mAdapter = new FragmentViewPagerAdapter(getChildFragmentManager(), mTitles);
